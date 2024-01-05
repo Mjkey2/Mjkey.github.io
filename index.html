@@ -1,41 +1,55 @@
-<!--this is how you comment. doc type does something.
-html does rules and top levels; root element. All other elements fall under this.
-html is the ROOT ELEMENT AND EVERYTHING ELSE ARE DESCENDANTS-->
 <!DOCTYPE html>
-<html>
-<html lang="en-us">
-    <!--This is header and head type. if you want to link to other pages to add functionality to the website you
-    add them here.-->
-    <head>
-        <meta charset="UTF-8">
-        <title>My first page!! Yay!</title>
-    </head>
-    <!--This is the PLACE of the body.-->
-    <!--COLOR OPTIONS-->
+<html lang="en">
 
-    <body>
-        <style>
-            p {
-              color: #ff315d;
-            }
-          </style>
-          <!--START OF TEXT-->
-        <h1><p>Hello World! Hi Everybody!</p></h1>
-        <img src="https://pbs.twimg.com/media/F_dJovgWEAA4wwT?format=png&name=900x900" alt="small cirno saying uh-huh in a insouciant manner">
-        <br />
-        <a href="https://x.com/lilyhops/status/1721784281121321087?s=20" target="_blank">Click if you want to listen to good music!</a>
-        <strong><a href="https://youtu.be/pdvUjwU-oN4?t=1207" target="blank">Death is coming!! Five nights at Freddys with Lily!!</a></a></strong>
-        <a href="https://www.youtube.com/watch?v=GQI72THyO5I&pp=ygUHR2VuZXNpcw%3D%3D">You don't have to worry, though. If you want to know how click here!</a>
-        <p>I go by Mjkey_M on the web, I came up with it myself. Cool, isnt it?</p>
-        <img src="https://pbs.twimg.com/media/F_guYIMagAA19B2?format=png&name=120x120" alt="shondowoozy">
-        <p>Hellow there, I'm Michael.<br /> Here are some things about me to get the gist</p>
-        <ul>
-            <li><p>I'm silly</p></li>
-            <li><p>Thinker little thinker me</p></li>
-            <li><p>Angel Mendacia ✟</p></li>
-            <li><p>Affirmaic Savant</p></li>
-            <li><p>My theology is very good, in which I mean very based :3</p></li>
-            <li><p>I'm very good at things I know about desu</p></li>
-        </ul>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="./static/js/app.js"></script>
+  <script src="./static/js/plots.js"></script>
+
+</body>
+
 </html>
